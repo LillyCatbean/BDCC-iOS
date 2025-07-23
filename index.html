@@ -7,10 +7,14 @@
   
   <!-- Link to manifest -->
   <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <meta name="theme-color" content="#000000" />
   
   <style>
     body, html {
-      margin: 0; padding: 0; height: 100%;
+      margin: 0;
+      padding: 0;
+      height: 100%;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -32,18 +36,23 @@
       font-size: 12px;
       user-select: none;
     }
+    footer a {
+      color: #55aaff;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <iframe src="https://rahimew.itch.io/bdcc" title="Broken Dreams Correctional Center"></iframe>
   <footer>
-    This is a modded PWA wrapper for Broken Dreams Correctional Center by Rahi — original game <a href="https://rahimew.itch.io/bdcc" target="_blank" style="color:#55aaff;">here</a>.
+    This is a modded PWA wrapper for Broken Dreams Correctional Center by Rahi — original game
+    <a href="https://rahimew.itch.io/bdcc" target="_blank">here</a>.
   </footer>
   
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
-      .catch(console.error);
+        .catch(console.error);
     }
   </script>
 </body>
